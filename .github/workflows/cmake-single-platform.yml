@@ -27,6 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure Conan profile
+        run: conan profile detect
+
       - name: Install Conan dependencies
         if: env.BUILD_TESTS == 'ON'
         run: |
