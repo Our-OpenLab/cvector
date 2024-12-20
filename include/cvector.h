@@ -8,6 +8,7 @@
 #ifndef CVECTOR_H
 #define CVECTOR_H
 
+#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
@@ -60,7 +61,6 @@ typedef struct {
 // Push back n elements (from pointer val) to the vector
 #define vector_push_back(v, val, n) vector_push_back_impl((void**)&(v), (const void*)(val), (n), sizeof(*(v)))
 
-
 // Pop back n elements
 #define vector_pop_back(v, n) vector_pop_back_impl((void**)&(v), (n), sizeof(*(v)))
 
@@ -71,13 +71,19 @@ typedef struct {
 #define vector_destroy(v) ((v) ? (free(VECTOR_HEADER(v))), (v)=NULL : 0)
 
 // Reserve capacity
-#define vector_reserve(v, c) vector_reserve_impl((void**)&(v), (c), sizeof(*(v)))
+#define vector_reserve(v, n) vector_reserve_impl((void**)&(v), (n), sizeof(*(v)))
 
 // Resize the vector (increase or decrease size)
 #define vector_resize(v, new_size) vector_resize_impl((void**)&(v), (new_size), sizeof(*(v)))
 
 // Shrink to fit (reduce capacity to current size)
 #define vector_shrink_to_fit(v) vector_shrink_to_fit_impl((void**)&(v), sizeof(*(v)))
+
+// Insert elements at the specified index
+#define vector_insert(v, index, val, count) vector_insert_impl((void**)&(v), (index), (val), (count), sizeof(*(v)))
+
+// Erase elements at the specified index
+#define vector_erase(v, index, count) vector_erase_impl((void**)&(v), (index), (count), sizeof(*(v)))
 
 
 #ifdef __cplusplus
@@ -127,11 +133,11 @@ void vector_pop_back_impl(void **v, size_t n, size_t item_size);
  * @brief Reserve capacity for at least 'c' elements.
  *
  * @param v Address of the vector pointer.
- * @param c Desired capacity.
+ * @param n Number of elements to reserve.
  * @param item_size Size of each element.
  * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
  */
-int vector_reserve_impl(void **v, size_t c, size_t item_size);
+int vector_reserve_impl(void **v, size_t n, size_t item_size);
 
 /**
  * @brief Resize the vector to have new_size elements.
@@ -164,7 +170,7 @@ int vector_shrink_to_fit_impl(void **v, size_t item_size);
  * @param item_size Size of each element.
  * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
  */
-int vector_insert(void **v, size_t index, const void *val, size_t count, size_t item_size) WARN_UNUSED_RESULT;
+int vector_insert_impl(void **v, size_t index, const void *val, size_t count, size_t item_size) WARN_UNUSED_RESULT;
 
 /**
  * @brief Erase elements at the specified index (like std::vector::erase).
@@ -174,7 +180,7 @@ int vector_insert(void **v, size_t index, const void *val, size_t count, size_t 
  * @param count Number of elements to erase.
  * @param item_size Size of each element.
  */
-void vector_erase(void **v, size_t index, size_t count, size_t item_size);
+void vector_erase_impl(void **v, size_t index, size_t count, size_t item_size);
 
 #ifdef __cplusplus
 }

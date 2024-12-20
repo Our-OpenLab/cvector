@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/guillaume/Epitech/teck3/cvector/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -142,6 +152,32 @@ example/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
 .PHONY : example/fast
 
+#=============================================================================
+# Target rules for targets named test_cvector
+
+# Build rule for target.
+test_cvector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_cvector
+.PHONY : test_cvector
+
+# fast build rule for target.
+test_cvector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/build
+.PHONY : test_cvector/fast
+
+#=============================================================================
+# Target rules for targets named coverage
+
+# Build rule for target.
+coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coverage
+.PHONY : coverage
+
+# fast build rule for target.
+coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+.PHONY : coverage/fast
+
 examples/example_usage.o: examples/example_usage.c.o
 .PHONY : examples/example_usage.o
 
@@ -166,53 +202,101 @@ examples/example_usage.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/examples/example_usage.c.s
 .PHONY : examples/example_usage.c.s
 
-src/cvector.o: src/cvector.c.o
-.PHONY : src/cvector.o
+src/cvector_core.o: src/cvector_core.c.o
+.PHONY : src/cvector_core.o
 
 # target to build an object file
-src/cvector.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector.c.o
-.PHONY : src/cvector.c.o
+src/cvector_core.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_core.c.o
+.PHONY : src/cvector_core.c.o
 
-src/cvector.i: src/cvector.c.i
-.PHONY : src/cvector.i
+src/cvector_core.i: src/cvector_core.c.i
+.PHONY : src/cvector_core.i
 
 # target to preprocess a source file
-src/cvector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector.c.i
-.PHONY : src/cvector.c.i
+src/cvector_core.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_core.c.i
+.PHONY : src/cvector_core.c.i
 
-src/cvector.s: src/cvector.c.s
-.PHONY : src/cvector.s
+src/cvector_core.s: src/cvector_core.c.s
+.PHONY : src/cvector_core.s
 
 # target to generate assembly for a file
-src/cvector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector.c.s
-.PHONY : src/cvector.c.s
+src/cvector_core.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_core.c.s
+.PHONY : src/cvector_core.c.s
 
-src/utils.o: src/utils.c.o
-.PHONY : src/utils.o
+src/cvector_insert_erase.o: src/cvector_insert_erase.c.o
+.PHONY : src/cvector_insert_erase.o
 
 # target to build an object file
-src/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/utils.c.o
-.PHONY : src/utils.c.o
+src/cvector_insert_erase.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o
+.PHONY : src/cvector_insert_erase.c.o
 
-src/utils.i: src/utils.c.i
-.PHONY : src/utils.i
+src/cvector_insert_erase.i: src/cvector_insert_erase.c.i
+.PHONY : src/cvector_insert_erase.i
 
 # target to preprocess a source file
-src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/utils.c.i
-.PHONY : src/utils.c.i
+src/cvector_insert_erase.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_insert_erase.c.i
+.PHONY : src/cvector_insert_erase.c.i
 
-src/utils.s: src/utils.c.s
-.PHONY : src/utils.s
+src/cvector_insert_erase.s: src/cvector_insert_erase.c.s
+.PHONY : src/cvector_insert_erase.s
 
 # target to generate assembly for a file
-src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/utils.c.s
-.PHONY : src/utils.c.s
+src/cvector_insert_erase.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_insert_erase.c.s
+.PHONY : src/cvector_insert_erase.c.s
+
+src/cvector_resize.o: src/cvector_resize.c.o
+.PHONY : src/cvector_resize.o
+
+# target to build an object file
+src/cvector_resize.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_resize.c.o
+.PHONY : src/cvector_resize.c.o
+
+src/cvector_resize.i: src/cvector_resize.c.i
+.PHONY : src/cvector_resize.i
+
+# target to preprocess a source file
+src/cvector_resize.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_resize.c.i
+.PHONY : src/cvector_resize.c.i
+
+src/cvector_resize.s: src/cvector_resize.c.s
+.PHONY : src/cvector_resize.s
+
+# target to generate assembly for a file
+src/cvector_resize.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/src/cvector_resize.c.s
+.PHONY : src/cvector_resize.c.s
+
+tests/test_cvector.o: tests/test_cvector.cpp.o
+.PHONY : tests/test_cvector.o
+
+# target to build an object file
+tests/test_cvector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/tests/test_cvector.cpp.o
+.PHONY : tests/test_cvector.cpp.o
+
+tests/test_cvector.i: tests/test_cvector.cpp.i
+.PHONY : tests/test_cvector.i
+
+# target to preprocess a source file
+tests/test_cvector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/tests/test_cvector.cpp.i
+.PHONY : tests/test_cvector.cpp.i
+
+tests/test_cvector.s: tests/test_cvector.cpp.s
+.PHONY : tests/test_cvector.s
+
+# target to generate assembly for a file
+tests/test_cvector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/tests/test_cvector.cpp.s
+.PHONY : tests/test_cvector.cpp.s
 
 # Help Target
 help:
@@ -222,17 +306,26 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... coverage"
 	@echo "... cvector"
 	@echo "... example"
+	@echo "... test_cvector"
 	@echo "... examples/example_usage.o"
 	@echo "... examples/example_usage.i"
 	@echo "... examples/example_usage.s"
-	@echo "... src/cvector.o"
-	@echo "... src/cvector.i"
-	@echo "... src/cvector.s"
-	@echo "... src/utils.o"
-	@echo "... src/utils.i"
-	@echo "... src/utils.s"
+	@echo "... src/cvector_core.o"
+	@echo "... src/cvector_core.i"
+	@echo "... src/cvector_core.s"
+	@echo "... src/cvector_insert_erase.o"
+	@echo "... src/cvector_insert_erase.i"
+	@echo "... src/cvector_insert_erase.s"
+	@echo "... src/cvector_resize.o"
+	@echo "... src/cvector_resize.i"
+	@echo "... src/cvector_resize.s"
+	@echo "... tests/test_cvector.o"
+	@echo "... tests/test_cvector.i"
+	@echo "... tests/test_cvector.s"
 .PHONY : help
 
 

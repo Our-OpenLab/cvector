@@ -65,11 +65,13 @@ CMAKE_BINARY_DIR = /Users/guillaume/Epitech/teck3/cvector/build
 # The main recursive "all" target.
 all: CMakeFiles/cvector.dir/all
 all: CMakeFiles/example.dir/all
+all: CMakeFiles/test_cvector.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/cvector.dir/codegen
 codegen: CMakeFiles/example.dir/codegen
+codegen: CMakeFiles/test_cvector.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -79,6 +81,8 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/cvector.dir/clean
 clean: CMakeFiles/example.dir/clean
+clean: CMakeFiles/test_cvector.dir/clean
+clean: CMakeFiles/coverage.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -88,12 +92,12 @@ clean: CMakeFiles/example.dir/clean
 CMakeFiles/cvector.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=1,2,3 "Built target cvector"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=2,3,4,5 "Built target cvector"
 .PHONY : CMakeFiles/cvector.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cvector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cvector.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 0
 .PHONY : CMakeFiles/cvector.dir/rule
@@ -119,12 +123,12 @@ CMakeFiles/cvector.dir/clean:
 CMakeFiles/example.dir/all: CMakeFiles/cvector.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=4,5 "Built target example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=6,7 "Built target example"
 .PHONY : CMakeFiles/example.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 0
 .PHONY : CMakeFiles/example.dir/rule
@@ -142,6 +146,68 @@ CMakeFiles/example.dir/codegen:
 CMakeFiles/example.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/clean
 .PHONY : CMakeFiles/example.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_cvector.dir
+
+# All Build rule for target.
+CMakeFiles/test_cvector.dir/all: CMakeFiles/cvector.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=8,9 "Built target test_cvector"
+.PHONY : CMakeFiles/test_cvector.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_cvector.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_cvector.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_cvector.dir/rule
+
+# Convenience name for target.
+test_cvector: CMakeFiles/test_cvector.dir/rule
+.PHONY : test_cvector
+
+# codegen rule for target.
+CMakeFiles/test_cvector.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/codegen
+.PHONY : CMakeFiles/test_cvector.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_cvector.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_cvector.dir/build.make CMakeFiles/test_cvector.dir/clean
+.PHONY : CMakeFiles/test_cvector.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/coverage.dir
+
+# All Build rule for target.
+CMakeFiles/coverage.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=1 "Built target coverage"
+.PHONY : CMakeFiles/coverage.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/coverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/coverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles 0
+.PHONY : CMakeFiles/coverage.dir/rule
+
+# Convenience name for target.
+coverage: CMakeFiles/coverage.dir/rule
+.PHONY : coverage
+
+# codegen rule for target.
+CMakeFiles/coverage.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/codegen
+.PHONY : CMakeFiles/coverage.dir/codegen
+
+# clean rule for target.
+CMakeFiles/coverage.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/clean
+.PHONY : CMakeFiles/coverage.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

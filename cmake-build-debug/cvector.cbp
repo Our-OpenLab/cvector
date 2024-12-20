@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cvector"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cvector">
+				<Option output="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/libcvector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/guillaume/Epitech/teck3/cvector/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/16/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvector"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cvector/fast">
+				<Option output="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/libcvector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/guillaume/Epitech/teck3/cvector/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/16/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvector/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="example">
+				<Option output="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/guillaume/Epitech/teck3/cvector/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/16/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 example"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="example/fast">
+				<Option output="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/guillaume/Epitech/teck3/cvector/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/16/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 example/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/guillaume/Epitech/teck3/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/guillaume/Epitech/teck3/cvector/examples/example_usage.c">
+			<Option target="example"/>
+		</Unit>
+		<Unit filename="/Users/guillaume/Epitech/teck3/cvector/src/cvector_core.c">
+			<Option target="cvector"/>
+		</Unit>
+		<Unit filename="/Users/guillaume/Epitech/teck3/cvector/src/cvector_insert_erase.c">
+			<Option target="cvector"/>
+		</Unit>
+		<Unit filename="/Users/guillaume/Epitech/teck3/cvector/src/cvector_resize.c">
+			<Option target="cvector"/>
+		</Unit>
+		<Unit filename="/Users/guillaume/Epitech/teck3/cvector/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

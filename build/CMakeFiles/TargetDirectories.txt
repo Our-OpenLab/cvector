@@ -1,4 +1,7 @@
 /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/cvector.dir
 /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/example.dir
+/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/test_cvector.dir
+/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/coverage.dir
+/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/test.dir
 /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/edit_cache.dir
 /Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles/rebuild_cache.dir

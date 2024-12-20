@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/guillaume/Epitech/teck3/cvector/include
 
-C_FLAGSarm64 = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk
+C_FLAGSarm64 = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -g -fprofile-arcs -ftest-coverage
 
-C_FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk
+C_FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -g -fprofile-arcs -ftest-coverage
 

@@ -72,47 +72,63 @@ include CMakeFiles/cvector.dir/flags.make
 CMakeFiles/cvector.dir/codegen:
 .PHONY : CMakeFiles/cvector.dir/codegen
 
-CMakeFiles/cvector.dir/src/cvector.c.o: CMakeFiles/cvector.dir/flags.make
-CMakeFiles/cvector.dir/src/cvector.c.o: /Users/guillaume/Epitech/teck3/cvector/src/cvector.c
-CMakeFiles/cvector.dir/src/cvector.c.o: CMakeFiles/cvector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cvector.dir/src/cvector.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cvector.dir/src/cvector.c.o -MF CMakeFiles/cvector.dir/src/cvector.c.o.d -o CMakeFiles/cvector.dir/src/cvector.c.o -c /Users/guillaume/Epitech/teck3/cvector/src/cvector.c
+CMakeFiles/cvector.dir/src/cvector_core.c.o: CMakeFiles/cvector.dir/flags.make
+CMakeFiles/cvector.dir/src/cvector_core.c.o: /Users/guillaume/Epitech/teck3/cvector/src/cvector_core.c
+CMakeFiles/cvector.dir/src/cvector_core.c.o: CMakeFiles/cvector.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cvector.dir/src/cvector_core.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cvector.dir/src/cvector_core.c.o -MF CMakeFiles/cvector.dir/src/cvector_core.c.o.d -o CMakeFiles/cvector.dir/src/cvector_core.c.o -c /Users/guillaume/Epitech/teck3/cvector/src/cvector_core.c
 
-CMakeFiles/cvector.dir/src/cvector.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cvector.dir/src/cvector.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guillaume/Epitech/teck3/cvector/src/cvector.c > CMakeFiles/cvector.dir/src/cvector.c.i
+CMakeFiles/cvector.dir/src/cvector_core.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cvector.dir/src/cvector_core.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guillaume/Epitech/teck3/cvector/src/cvector_core.c > CMakeFiles/cvector.dir/src/cvector_core.c.i
 
-CMakeFiles/cvector.dir/src/cvector.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cvector.dir/src/cvector.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guillaume/Epitech/teck3/cvector/src/cvector.c -o CMakeFiles/cvector.dir/src/cvector.c.s
+CMakeFiles/cvector.dir/src/cvector_core.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cvector.dir/src/cvector_core.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guillaume/Epitech/teck3/cvector/src/cvector_core.c -o CMakeFiles/cvector.dir/src/cvector_core.c.s
 
-CMakeFiles/cvector.dir/src/utils.c.o: CMakeFiles/cvector.dir/flags.make
-CMakeFiles/cvector.dir/src/utils.c.o: /Users/guillaume/Epitech/teck3/cvector/src/utils.c
-CMakeFiles/cvector.dir/src/utils.c.o: CMakeFiles/cvector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cvector.dir/src/utils.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cvector.dir/src/utils.c.o -MF CMakeFiles/cvector.dir/src/utils.c.o.d -o CMakeFiles/cvector.dir/src/utils.c.o -c /Users/guillaume/Epitech/teck3/cvector/src/utils.c
+CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o: CMakeFiles/cvector.dir/flags.make
+CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o: /Users/guillaume/Epitech/teck3/cvector/src/cvector_insert_erase.c
+CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o: CMakeFiles/cvector.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o -MF CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o.d -o CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o -c /Users/guillaume/Epitech/teck3/cvector/src/cvector_insert_erase.c
 
-CMakeFiles/cvector.dir/src/utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cvector.dir/src/utils.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guillaume/Epitech/teck3/cvector/src/utils.c > CMakeFiles/cvector.dir/src/utils.c.i
+CMakeFiles/cvector.dir/src/cvector_insert_erase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cvector.dir/src/cvector_insert_erase.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guillaume/Epitech/teck3/cvector/src/cvector_insert_erase.c > CMakeFiles/cvector.dir/src/cvector_insert_erase.c.i
 
-CMakeFiles/cvector.dir/src/utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cvector.dir/src/utils.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guillaume/Epitech/teck3/cvector/src/utils.c -o CMakeFiles/cvector.dir/src/utils.c.s
+CMakeFiles/cvector.dir/src/cvector_insert_erase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cvector.dir/src/cvector_insert_erase.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guillaume/Epitech/teck3/cvector/src/cvector_insert_erase.c -o CMakeFiles/cvector.dir/src/cvector_insert_erase.c.s
+
+CMakeFiles/cvector.dir/src/cvector_resize.c.o: CMakeFiles/cvector.dir/flags.make
+CMakeFiles/cvector.dir/src/cvector_resize.c.o: /Users/guillaume/Epitech/teck3/cvector/src/cvector_resize.c
+CMakeFiles/cvector.dir/src/cvector_resize.c.o: CMakeFiles/cvector.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cvector.dir/src/cvector_resize.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cvector.dir/src/cvector_resize.c.o -MF CMakeFiles/cvector.dir/src/cvector_resize.c.o.d -o CMakeFiles/cvector.dir/src/cvector_resize.c.o -c /Users/guillaume/Epitech/teck3/cvector/src/cvector_resize.c
+
+CMakeFiles/cvector.dir/src/cvector_resize.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cvector.dir/src/cvector_resize.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guillaume/Epitech/teck3/cvector/src/cvector_resize.c > CMakeFiles/cvector.dir/src/cvector_resize.c.i
+
+CMakeFiles/cvector.dir/src/cvector_resize.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cvector.dir/src/cvector_resize.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guillaume/Epitech/teck3/cvector/src/cvector_resize.c -o CMakeFiles/cvector.dir/src/cvector_resize.c.s
 
 # Object files for target cvector
 cvector_OBJECTS = \
-"CMakeFiles/cvector.dir/src/cvector.c.o" \
-"CMakeFiles/cvector.dir/src/utils.c.o"
+"CMakeFiles/cvector.dir/src/cvector_core.c.o" \
+"CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o" \
+"CMakeFiles/cvector.dir/src/cvector_resize.c.o"
 
 # External object files for target cvector
 cvector_EXTERNAL_OBJECTS =
 
-libcvector.a: CMakeFiles/cvector.dir/src/cvector.c.o
-libcvector.a: CMakeFiles/cvector.dir/src/utils.c.o
+libcvector.a: CMakeFiles/cvector.dir/src/cvector_core.c.o
+libcvector.a: CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o
+libcvector.a: CMakeFiles/cvector.dir/src/cvector_resize.c.o
 libcvector.a: CMakeFiles/cvector.dir/build.make
 libcvector.a: CMakeFiles/cvector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libcvector.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/guillaume/Epitech/teck3/cvector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libcvector.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/cvector.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cvector.dir/link.txt --verbose=$(VERBOSE)
 

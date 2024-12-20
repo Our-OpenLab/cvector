@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Darwin")
 set(CMAKE_HOST_SYSTEM_VERSION "24.2.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "arm64")
 
-
+include("/Users/guillaume/Epitech/teck3/cvector/build/build/Debug/generators/conan_toolchain.cmake")
 
 set(CMAKE_SYSTEM "Darwin-24.2.0")
 set(CMAKE_SYSTEM_NAME "Darwin")

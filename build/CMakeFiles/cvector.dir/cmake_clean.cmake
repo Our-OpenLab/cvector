@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cvector.dir/src/cvector.c.o"
-  "CMakeFiles/cvector.dir/src/cvector.c.o.d"
-  "CMakeFiles/cvector.dir/src/utils.c.o"
-  "CMakeFiles/cvector.dir/src/utils.c.o.d"
+  "CMakeFiles/cvector.dir/src/cvector_core.c.o"
+  "CMakeFiles/cvector.dir/src/cvector_core.c.o.d"
+  "CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o"
+  "CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o.d"
+  "CMakeFiles/cvector.dir/src/cvector_resize.c.o"
+  "CMakeFiles/cvector.dir/src/cvector_resize.c.o.d"
   "libcvector.a"
   "libcvector.pdb"
 )
