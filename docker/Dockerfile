@@ -12,6 +12,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install conan
 
-RUN useradd -ms /bin/bash devuser
-USER devuser
-WORKDIR /home/devuser/app
+WORKDIR /home/app
