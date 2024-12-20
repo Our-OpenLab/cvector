@@ -33,7 +33,7 @@ jobs:
       - name: Install Conan dependencies
         if: env.BUILD_TESTS == 'ON'
         run: |
-          conan install . --output-folder=${{github.workspace}}/build --build=missing -s build_type=${{env.BUILD_TYPE}}
+          conan install . --output-folder=build --build=missing -s build_type=${{env.BUILD_TYPE}}
 
       - name: Test
         run: |
