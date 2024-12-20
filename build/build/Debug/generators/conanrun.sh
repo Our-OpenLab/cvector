@@ -1,1 +1,0 @@
-. "/Users/guillaume/Epitech/teck3/cvector/build/build/Debug/generators/conanrunenv-debug-armv8.sh"

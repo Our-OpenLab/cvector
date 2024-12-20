@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libcvector.a CMakeFiles/cvector.dir/src/cvector_core.c.o CMakeFiles/cvector.dir/src/cvector_insert_erase.c.o CMakeFiles/cvector.dir/src/cvector_resize.c.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libcvector.a
