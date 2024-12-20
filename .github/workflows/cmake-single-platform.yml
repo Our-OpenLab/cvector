@@ -27,17 +27,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure Conan profile
+        run: conan profile detect
+
       - name: Install Conan dependencies
         if: env.BUILD_TESTS == 'ON'
         run: |
           conan install . --output-folder=build --build=missing -s build_type=${{env.BUILD_TYPE}}
+
+      - name: Test
+        run: |
+          ls -la
+          ls -la build
+          ls -la build/build
 
       - name: Configure CMake
         # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
         # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
         run: cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
                             -DBUILD_TESTS=${{env.BUILD_TESTS}} \
-                            -DCMAKE_TOOLCHAIN_FILE=build/Debug/generators/conan_toolchain.cmake
+                            -DCMAKE_TOOLCHAIN_FILE=build/Release/generators/conan_toolchain.cmake
 
       - name: Build
         # Build your program with the given configuration
