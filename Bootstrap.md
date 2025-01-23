@@ -79,13 +79,13 @@ typedef struct {
 #define vector_back(v) ((v) && vector_size(v) > 0 ? (TODO) : NULL) // Complétez pour retourner le dernier élément
 
 // Create a new vector of type T with initial capacity c
-#define VECTOR(T, c) ((T*)(TODO)) // Complétez pour initialiser un nouveau vecteur
+#define VECTOR(T, c) ((T*)vector_init(sizeof(T), (c)))
 
 // Push back n elements (from pointer val) to the vector
-#define vector_push_back(v, val, n) (TODO) // Complétez pour ajouter des éléments au vecteur
+#define vector_push_back(v, val, n) vector_push_back_impl((void**)&(v), (const void*)(val), (n), sizeof(*(v))) // Complétez pour ajouter des éléments au vecteur
 
 // Pop back n elements
-#define vector_pop_back(v, n) (TODO) // Complétez pour retirer des éléments du vecteur
+#define vector_pop_back(v, n) vector_pop_back_impl(TODO, (n), TODO) // Complétez pour retirer des éléments du vecteur
 
 // Clear the vector (size = 0, but doesn't change capacity)
 #define vector_clear(v) (TODO) // Complétez pour réinitialiser la taille à 0
@@ -93,18 +93,116 @@ typedef struct {
 // Destroy the vector completely (free memory)
 #define vector_destroy(v) (TODO) // Complétez pour libérer la mémoire allouée au vecteur
 
+// Reserve capacity
+#define vector_reserve(v, n) vector_reserve_impl(TODO, (n), TODO) // Complétez pour réserver de la capacité
+
+// Resize the vector (increase or decrease size)
+#define vector_resize(v, new_size) vector_resize_impl(TODO, (new_size), TODO) // Complétez pour redimensionner le vecteur
+
+// Shrink to fit (reduce capacity to current size)
+#define vector_shrink_to_fit(v) vector_shrink_to_fit_impl(TODO, TODO)
+
+// Insert elements at the specified index
+#define vector_insert(v, index, val, count) vector_insert_impl(TODO, (index), (val), (count), TODO)
+
+// Erase elements at the specified index
+#define vector_erase(v, index, count) vector_erase_impl(TODO, (index), (count), TODO)
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+/**
+ * @brief Initialize a new vector with given element size and capacity.
+ *
+ * @param item_size Size of each element.
+ * @param capacity Initial capacity.
+ * @return Pointer to the newly allocated vector, or NULL on failure.
+ */
 void *vector_init(size_t item_size, size_t capacity) WARN_UNUSED_RESULT;
+
+/**
+ * @brief Ensure the vector has enough capacity for at least item_count new elements.
+ *
+ * @param v Pointer to the vector.
+ * @param item_count Number of additional elements required.
+ * @param item_size Size of each element.
+ * @return A pointer to the (possibly reallocated) vector, or NULL on failure.
+ */
 void *vector_ensure_capacity(void *v, size_t item_count, size_t item_size) WARN_UNUSED_RESULT;
-int vector_push_back_impl(void **v, const void *val, size_t n, size_t item_size) WARN_UNUSED_RESULT;
-void vector_pop_back_impl(void **v, size_t n, size_t item_size);
-int vector_resize_impl(void **v, size_t new_size, size_t item_size);
-int vector_shrink_to_fit_impl(void **v, size_t item_size);
-int vector_insert_impl(void **v, size_t index, const void *val, size_t count, size_t item_size) WARN_UNUSED_RESULT;
-void vector_erase_impl(void **v, size_t index, size_t count, size_t item_size);
+
+/**
+ * @brief Push back n elements from val to the end of the vector.
+ *
+ * @param v Address of the vector pointer.
+ * @param val Pointer to the data to insert.
+ * @param n Number of elements to insert.
+ * @param item_size Size of each element.
+ * @return VECTOR_SUCCESS if successful, VECTOR_FAILURE otherwise.
+ */
+int vector_push_back_impl(TODO v, const void *val, size_t n, size_t item_size) WARN_UNUSED_RESULT;
+
+/**
+ * @brief Pop back n elements from the vector.
+ *
+ * @param v Address of the vector pointer.
+ * @param n Number of elements to remove from the end.
+ * @param item_size Size of each element.
+ */
+void vector_pop_back_impl(TODO v, size_t n, size_t item_size);
+
+/**
+ * @brief Reserve capacity for at least 'c' elements.
+ *
+ * @param v Address of the vector pointer.
+ * @param n Number of elements to reserve.
+ * @param item_size Size of each element.
+ * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
+ */
+int vector_reserve_impl(TODO v, size_t n, size_t item_size);
+
+/**
+ * @brief Resize the vector to have new_size elements.
+ * If new_size > current_size, new elements are zero-initialized.
+ * If new_size < current_size, elements are truncated.
+ *
+ * @param v Address of the vector pointer.
+ * @param new_size New desired size.
+ * @param item_size Size of each element.
+ * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
+ */
+int vector_resize_impl(TODO v, size_t new_size, size_t item_size);
+
+/**
+ * @brief Shrink the capacity of the vector to match its current size.
+ *
+ * @param v Address of the vector pointer.
+ * @param item_size Size of each element.
+ * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
+ */
+int vector_shrink_to_fit_impl(TODO v, size_t item_size);
+
+/**
+ * @brief Insert an element at the specified index (like std::vector::insert).
+ *
+ * @param v Address of the vector pointer.
+ * @param index Position where to insert the elements.
+ * @param val Pointer to the element(s) to insert.
+ * @param count Number of elements to insert.
+ * @param item_size Size of each element.
+ * @return VECTOR_SUCCESS on success, VECTOR_FAILURE on failure.
+ */
+int vector_insert_impl(TODO v, size_t index, const void *val, size_t count, size_t item_size) WARN_UNUSED_RESULT;
+
+/**
+ * @brief Erase elements at the specified index (like std::vector::erase).
+ *
+ * @param v Address of the vector pointer.
+ * @param index Position of the first element to erase.
+ * @param count Number of elements to erase.
+ * @param item_size Size of each element.
+ */
+void vector_erase_impl(TODO v, size_t index, size_t count, size_t item_size);
 
 #ifdef __cplusplus
 }
@@ -132,12 +230,12 @@ void *vector_ensure_capacity(void *v, size_t item_count, size_t item_size)
     // TODO : Implémentez la logique pour garantir la capacité
 }
 
-int vector_push_back_impl(void **v, const void *val, size_t count, size_t item_size)
+int vector_push_back_impl(TODO v, const void *val, size_t count, size_t item_size)
 {
     // TODO : Implémentez l'ajout d'éléments à la fin
 }
 
-void vector_pop_back_impl(void **v, size_t count, size_t item_size)
+void vector_pop_back_impl(TODO v, size_t count, size_t item_size)
 {
     // TODO : Implémentez la suppression des éléments en fin de vecteur
 }
@@ -152,12 +250,12 @@ Dans ce fichier, implémentez les fonctions d'insertion et de suppression.
 ```c
 #include "cvector.h"
 
-int vector_insert_impl(void **v, const size_t index, const void *val, const size_t count, size_t item_size)
+int vector_insert_impl(TODO v, const size_t index, const void *val, const size_t count, size_t item_size)
 {
     // TODO : Implémentez la logique pour insérer des éléments
 }
 
-void vector_erase_impl(void **v, const size_t index, size_t count, const size_t item_size)
+void vector_erase_impl(TODO v, const size_t index, size_t count, const size_t item_size)
 {
     // TODO : Implémentez la logique pour supprimer des éléments
 }
@@ -172,14 +270,32 @@ Dans ce fichier, implémentez les fonctions de redimensionnement.
 ```c
 #include "cvector.h"
 
-int vector_resize_impl(void **v, const size_t new_size, const size_t item_size)
+int vector_reserve_impl(void **v, const size_t n,
+                               const size_t item_size)
 {
-    // TODO : Implémentez la logique pour redimensionner le vecteur
+
+    // TODO : Implémentez la logique pour réserver de la capacité
 }
 
-int vector_shrink_to_fit_impl(void **v, const size_t item_size)
+static inline void *vector_init_zeroed(size_t item_size, size_t capacity)
+{
+    // TODO : Implémentez la logique pour initialiser un vecteur avec des éléments à zéro
+    
+    -> man calloc
+}
+
+int vector_resize_impl(TODO v, const size_t new_size, const size_t item_size)
+{
+    // TODO : Implémentez la logique pour redimensionner le vecteur
+    
+    -> utiliser vector_init_zeroed si !*v
+}
+
+int vector_shrink_to_fit_impl(TODO v, const size_t item_size)
 {
     // TODO : Implémentez la logique pour réduire la capacité
+    
+    -> man realloc
 }
 ```
 
