@@ -1,5 +1,5 @@
 ### **EPITECH PROJECT, 2024**  
-**CVector - Sujet pédagogique**  
+**CVector - Workshop**  
 
 ---
 
