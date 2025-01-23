@@ -1,5 +1,43 @@
 ### **EPITECH PROJECT, 2024**  
-**CVector - Workshop**  
+**CVector - Workshop**
+
+---
+
+### **Introduction aux macros et à leur utilité dans la compilation**
+
+Les macros sont des directives préprocesseur en C qui permettent de substituer un texte ou une expression directement dans le code source avant la compilation. Contrairement aux fonctions, les macros ne génèrent pas d'appel supplémentaire à l'exécution, ce qui peut améliorer les performances dans certains cas.
+
+**Pourquoi utiliser les macros ?**
+1. **Abstraction et lisibilité** : Les macros rendent le code plus clair en encapsulant des opérations complexes ou répétitives.
+2. **Éviter les erreurs répétées** : Les macros garantissent une uniformité en remplaçant systématiquement les parties du code concernées.
+3. **Faciliter les opérations sur des types génériques** : Elles permettent d'écrire des fonctions ou des structures réutilisables sans connaître à l'avance le type manipulé.
+
+Dans le contexte de ce projet, les macros jouent un rôle central dans l'accès et la gestion des propriétés du vecteur dynamique. Par exemple, les macros définies dans `cvector.h` permettent d'abstraire des opérations comme la récupération de la taille ou de la capacité d'un vecteur dynamique, tout en utilisant efficacement `sizeof` pour travailler avec des types génériques.
+
+Prenons l'exemple suivant tiré du sujet :
+```c
+#define vector_size(v) ((v) ? ((vector_header_t *)((char *)(v) - sizeof(vector_header_t)))->size : 0)
+```
+Cette macro calcule la taille actuelle du vecteur (le nombre d'éléments qu'il contient). Voici comment elle fonctionne :
+1. Si le vecteur `v` est valide (non NULL), elle :
+   - Cast le pointeur du vecteur `v` en un pointeur `char *` pour effectuer des calculs d'adressage.
+   - Soustrait `sizeof(vector_header_t)` pour accéder à l'en-tête du vecteur. L'en-tête est placé juste avant les données pour stocker des métadonnées comme la taille et la capacité.
+   - Cast le résultat en un pointeur vers `vector_header_t` pour accéder à ses champs.
+   - Retourne la valeur du champ `size`.
+
+2. Si le vecteur `v` est NULL, la macro retourne `0`.
+
+Ainsi, cette macro encapsule une opération complexe (calculer la taille en mémoire d'un vecteur générique) dans une expression lisible et réutilisable.
+
+---
+
+### **Contexte**
+Le but de ce projet est de développer une implémentation en C d'un vecteur dynamique similaire à `std::vector` en C++. Vous devrez compléter un fichier d'en-tête partiellement rempli et implémenter les fonctions principales dans différents fichiers `.c`.
+
+Le vecteur dynamique devra permettre :
+1. L'allocation dynamique de mémoire.
+2. L'ajout, la suppression et le redimensionnement des éléments.
+3. La gestion explicite de la mémoire.
 
 ---
 
