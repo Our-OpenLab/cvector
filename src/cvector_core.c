@@ -19,7 +19,6 @@ void *vector_init(size_t item_size, size_t capacity)
     header->size = 0;
     header->capacity = capacity;
     header->initial_capacity = capacity;
-
     return (header + 1);
 }
 
@@ -38,31 +37,30 @@ void *vector_ensure_capacity(void *v, size_t item_count, size_t item_size)
     new_capacity = header->capacity * 2;
     while (new_capacity < required_capacity)
         new_capacity *= 2;
-    header = realloc(header, sizeof(vector_header_t) + (new_capacity * item_size));
+    header = realloc(header,
+        sizeof(vector_header_t) + (new_capacity * item_size));
     if (!header)
         return NULL;
     header->capacity = new_capacity;
-
     return (header + 1);
 }
 
-int vector_push_back_impl(void **v, const void *val, size_t count, size_t item_size)
+int vector_push_back_impl(void **v, const void *val, size_t count,
+    size_t item_size)
 {
     vector_header_t *header;
     void *tmp;
 
     if (!v || !val || count == 0 || item_size == 0)
         return VECTOR_FAILURE;
-    if ((uintptr_t)val < 4096)
-        return VECTOR_FAILURE;
     tmp = vector_ensure_capacity(*v, count, item_size);
     if (!tmp)
         return VECTOR_FAILURE;
     *v = tmp;
     header = VECTOR_HEADER(*v);
-    memcpy((unsigned char*)(*v) + (header->size * item_size), val, count * item_size);
+    memcpy((unsigned char *)(*v) + (header->size * item_size), val,
+        count * item_size);
     header->size += count;
-
     return VECTOR_SUCCESS;
 }
 
